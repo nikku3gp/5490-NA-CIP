@@ -33,8 +33,7 @@ public class exc1 {
                             for (int i = 1; i <= msgSp.length-1; i++){
                                 msg+=msgSp[i] + " ";
                             }
-                            bw.write(msg);
-                            bw.write(System.lineSeparator());
+                            fw.write(parts[1] + "\n");
                             System.out.println("Message logged");
                             bw.close();
                         }else{
