@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/5490-NA-CIP.iml" filepath="$PROJECT_DIR$/.idea/5490-NA-CIP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MidTerm/MidTerm.iml" filepath="$PROJECT_DIR$/MidTerm/MidTerm.iml" />
       <module fileurl="file://$PROJECT_DIR$/mid-term-trial/mid-term-trial.iml" filepath="$PROJECT_DIR$/mid-term-trial/mid-term-trial.iml" />
       <module fileurl="file://$PROJECT_DIR$/week4/week4.iml" filepath="$PROJECT_DIR$/week4/week4.iml" />
     </modules>
