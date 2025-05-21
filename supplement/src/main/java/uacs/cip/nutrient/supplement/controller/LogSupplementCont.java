@@ -17,11 +17,13 @@ public class LogSupplementCont {
 
     @GetMapping
     public List<LogSupplement> getAllLogs(){
+
         return logSupplementService.getAllLogs();
     }
 
     @GetMapping("/{id}")
     public Optional<LogSupplement> getLog(@PathVariable Long id){
+
         return logSupplementService.getLog(id);
     }
 
@@ -48,6 +50,7 @@ public class LogSupplementCont {
 
     @DeleteMapping("/{id}")
     public void deleteLog(@PathVariable Long id){
+
         logSupplementService.deleteLog(id);
     }
 }

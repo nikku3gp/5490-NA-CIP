@@ -3,7 +3,7 @@ package uacs.cip.nutrient.supplement.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uacs.cip.nutrient.supplement.entity.NutrientGoal;
-import uacs.cip.nutrient.supplement.repositoty.NutrientGoalRepository;
+import uacs.cip.nutrient.supplement.repository.NutrientGoalRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,6 +18,7 @@ public class NutrientGoalService {
     }
 
     public Optional<NutrientGoal> getGoal(Long id){
+
         return nutrientGoalRepository.findById(id);
     }
 
@@ -26,10 +27,12 @@ public class NutrientGoalService {
     }
 
     public NutrientGoal saveGoal(NutrientGoal nutrientGoal){
+
         return nutrientGoalRepository.save(nutrientGoal);
     }
 
     public void deleteGoal(Long id){
+
         nutrientGoalRepository.deleteById(id);
     }
 }

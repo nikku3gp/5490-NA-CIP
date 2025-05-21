@@ -15,11 +15,13 @@ public class NutrientGoalCont {
 
     @GetMapping
     public List<NutrientGoal> getAllGoals(){
+
         return nutrientGoalService.getAllGoals();
     }
 
     @GetMapping("/{id}")
     public Optional<NutrientGoal> getGoal(@PathVariable Long id){
+
         return nutrientGoalService.getGoal(id);
     }
 
@@ -41,6 +43,7 @@ public class NutrientGoalCont {
 
     @DeleteMapping("/{id}")
     public void deleteGoal(@PathVariable Long id){
+
         nutrientGoalService.deleteGoal(id);
     }
 }

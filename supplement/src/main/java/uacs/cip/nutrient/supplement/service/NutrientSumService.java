@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import uacs.cip.nutrient.supplement.entity.LogSupplement;
 import uacs.cip.nutrient.supplement.entity.NutrientGoal;
 import uacs.cip.nutrient.supplement.entity.NutrientSummary;
-import uacs.cip.nutrient.supplement.repositoty.LogSupplementRepository;
-import uacs.cip.nutrient.supplement.repositoty.NutrientGoalRepository;
-import uacs.cip.nutrient.supplement.repositoty.NutrientSumRepository;
+import uacs.cip.nutrient.supplement.repository.LogSupplementRepository;
+import uacs.cip.nutrient.supplement.repository.NutrientGoalRepository;
+import uacs.cip.nutrient.supplement.repository.NutrientSumRepository;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
