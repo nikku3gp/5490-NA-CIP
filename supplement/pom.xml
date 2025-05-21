@@ -12,7 +12,7 @@
 	<artifactId>supplement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>supplement</name>
-	<description>Nutrient Supplement Tracker</description>
+	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
