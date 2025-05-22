@@ -1,10 +1,5 @@
 package uacs.cip.nutrient.supplement.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
 import java.time.LocalDate;
 
 public class Deficiency {

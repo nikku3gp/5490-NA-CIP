@@ -1,18 +1,8 @@
 package uacs.cip.nutrient.supplement.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import org.springframework.cglib.core.Local;
-
 import java.time.LocalDate;
 
-@Entity
 public class NutrientSummary {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
     private String nutrientType;
     private double totalConsumed;
     private double target;
