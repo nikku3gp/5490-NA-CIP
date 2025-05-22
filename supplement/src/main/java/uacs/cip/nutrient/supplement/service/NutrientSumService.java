@@ -7,7 +7,6 @@ import uacs.cip.nutrient.supplement.entity.NutrientGoal;
 import uacs.cip.nutrient.supplement.entity.NutrientSummary;
 import uacs.cip.nutrient.supplement.repository.LogSupplementRepository;
 import uacs.cip.nutrient.supplement.repository.NutrientGoalRepository;
-import uacs.cip.nutrient.supplement.repository.NutrientSumRepository;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -17,8 +16,6 @@ import java.util.stream.Collectors;
 
 @Service
 public class NutrientSumService {
-    @Autowired
-    private NutrientSumRepository nutrientSumRepository;
     @Autowired
     private NutrientGoalRepository nutrientGoalRepository;
     @Autowired
