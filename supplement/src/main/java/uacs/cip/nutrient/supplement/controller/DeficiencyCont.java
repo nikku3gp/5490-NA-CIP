@@ -15,7 +15,7 @@ public class DeficiencyCont {
 
     @GetMapping
     public List<Deficiency> getAlert(@RequestParam LocalDate date){
-        List<Deficiency> alert = deficiencyService.getDeficiencyFroDate(date);
+        List<Deficiency> alert = deficiencyService.getDeficiencyForDate(date);
         return alert;
     }
 }

@@ -7,5 +7,5 @@ import java.time.LocalDate;
 import java.util.List;
 @Repository
 public interface DeficiencyRepository extends JpaRepository<Deficiency, Long> {
-    List<Deficiency> getDeficiencyForDate(LocalDate date);
+    List<Deficiency> findByDate(LocalDate date);
 }

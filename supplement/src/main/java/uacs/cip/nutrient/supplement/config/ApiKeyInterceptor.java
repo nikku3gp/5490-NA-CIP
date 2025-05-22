@@ -10,7 +10,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 @Component
 public class ApiKeyInterceptor implements HandlerInterceptor {
     private static final Logger logger = LoggerFactory.getLogger(ApiKeyInterceptor.class);
-    private static final String API_KEY_HEADER = "";
+    private static final String API_KEY_HEADER = "X-API-KEY";
 
     private final ApiKeyProperties apiKeyProperties;
 

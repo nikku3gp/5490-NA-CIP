@@ -1,21 +1,41 @@
 package uacs.cip.nutrient.supplement.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import org.springframework.cglib.core.Local;
+
+import java.time.LocalDate;
+
 @Entity
 public class NutrientSummary {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nutrientType;
     private double totalConsumed;
     private double target;
     private boolean met;
+    private LocalDate date;
 
     public NutrientSummary() {
     }
 
-    public NutrientSummary(String nutrientType, double totalConsumed, double target, boolean met) {
+    public NutrientSummary(String nutrientType, double totalConsumed, double target, boolean met, LocalDate date) {
         this.nutrientType = nutrientType;
         this.totalConsumed = totalConsumed;
         this.target = target;
         this.met = met;
+        this.date = date;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
     public String getNutrientType() {

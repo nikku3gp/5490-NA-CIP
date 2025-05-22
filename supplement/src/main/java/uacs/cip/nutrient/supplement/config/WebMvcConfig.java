@@ -17,6 +17,10 @@ public class WebMvcConfig implements WebMvcConfigurer{
 
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-
+        registry.addInterceptor(apiKeyInterceptor)
+                .addPathPatterns("/supplements/**")
+                .excludePathPatterns("/h2-console/**")
+                .excludePathPatterns("/error");
+        logger.info("API Key interception paths configured");
     }
 }

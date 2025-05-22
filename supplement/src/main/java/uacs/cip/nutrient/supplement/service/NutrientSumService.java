@@ -37,7 +37,7 @@ public class NutrientSumService {
             double consumed = consumedByNutrient.getOrDefault(nutrient, 0.0);
             boolean met = consumed >= goal.getTargetAmount();
 
-            summs.add(new NutrientSummary(nutrient, consumed, goal.getTargetAmount(), met));
+            summs.add(new NutrientSummary(nutrient, consumed, goal.getTargetAmount(), met, date));
         }
 
         return summs;
