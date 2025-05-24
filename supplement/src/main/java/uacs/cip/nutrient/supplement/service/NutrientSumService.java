@@ -25,9 +25,9 @@ public class NutrientSumService {
         //get all logs and goals
         List<LogSupplement> logs = logSupplementRepository.findByDate(date);
         List<NutrientGoal> goals = nutrientGoalRepository.findAll();
-        //map the nutrient type to the goal
+        //map the nutrient type and the amount
         Map<String, Double> consumedByNutrient = logs.stream().collect(Collectors.groupingBy(LogSupplement::getNutrientType, Collectors.summingDouble(LogSupplement::getAmount)));
-        //create a list to store all goals and return them
+        //create a list to store all goals and check if goal is met
         List<NutrientSummary> summs = new ArrayList<>();
         for(NutrientGoal goal:goals){
             String nutrient = goal.getNutrientType();

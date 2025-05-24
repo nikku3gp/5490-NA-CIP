@@ -1,5 +1,5 @@
 package uacs.cip.nutrient.supplement.service;
-import lombok.extern.java.Log;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uacs.cip.nutrient.supplement.entity.Deficiency;
@@ -23,13 +23,13 @@ public class DeficiencyService {
     public LogSupplementRepository logSupplementRepository;
 
     public List<Deficiency> getDeficiencyForDate(LocalDate date){
+        //get all logs and goals
         List<LogSupplement> logs = logSupplementRepository.findByDate(date);
         List<NutrientGoal> goals = nutrientGoalRepository.findAll();
-
+        //map nutrient type and amount
         Map<String, Double> consumedByNutrient = logs.stream().collect(Collectors.groupingBy(LogSupplement::getNutrientType,Collectors.summingDouble(LogSupplement::getAmount)));
-
+        //create a list to store all deficiencies that haven't been met and by how much
         List<Deficiency> alerts = new ArrayList<>();
-
         for(NutrientGoal goal:goals){
             String nutrient = goal.getNutrientType();
             double consumed = consumedByNutrient.getOrDefault(nutrient, 0.0);

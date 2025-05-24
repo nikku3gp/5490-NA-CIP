@@ -24,7 +24,7 @@ public class NutrientGoalCont {
         return nutrientGoalService.getGoal(id);
     }
 
-    @GetMapping("/{nutrientType}")
+    @GetMapping("/type/{nutrientType}")
     public Optional<NutrientGoal> getGoalByType(@PathVariable String nutrientType){
         return nutrientGoalService.getGoalByType(nutrientType);
     }
