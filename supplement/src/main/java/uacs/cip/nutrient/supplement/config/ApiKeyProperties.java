@@ -1,9 +1,12 @@
 package uacs.cip.nutrient.supplement.config;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ApiKeyProperties {
-    private static final String API_KEY = "e1c11dc9-9f1b-4d13-b3a1-a7f00ea39aca";
+
+    @Value("${app.api.key}")
+    private String API_KEY;
 
     public String getApiKey(){
         return API_KEY;
