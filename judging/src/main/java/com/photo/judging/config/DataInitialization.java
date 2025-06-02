@@ -32,8 +32,8 @@ public class DataInitialization {
                                 new Judge("Lena", "OPS", "Chef")
                         )
                 );
-                submissionRepo.saveAll(savedSubmissions);
-                judgeRepo.saveAll(savedJudges);
+                //submissionRepo.saveAll(savedSubmissions);
+                //judgeRepo.saveAll(savedJudges);
 
             }
         };

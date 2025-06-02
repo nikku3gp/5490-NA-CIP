@@ -1,8 +1,6 @@
 package com.photo.judging.controller;
 import com.photo.judging.entity.Judge;
-import com.photo.judging.entity.Score;
 import com.photo.judging.service.JudgeService;
-import com.photo.judging.service.ScoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +14,6 @@ import java.util.Optional;
 public class JudgeController {
     @Autowired
     private JudgeService judgeService;
-    @Autowired
-    private ScoreService scoreService;
 
     @GetMapping
     public List<Judge> getAllJudges(){
@@ -45,15 +41,15 @@ public class JudgeController {
         judgeService.deleteJudge(id);
     }
 
-    @GetMapping("/{judgeId}/scores")
+   /* @GetMapping("/{judgeId}/scores")
     public List<Score> getJudgeScore(@PathVariable Long judgeId){
         return judgeService.getJudgeScore(judgeId);
-    }
-    @PostMapping("/{judgeId}/submissions/{subId}/scores")
+    }*/
+    /*@PostMapping("/{judgeId}/submissions/{subId}/scores")
     public ResponseEntity<Score> addScore(@PathVariable Long judgeId, @PathVariable Long subId, @RequestBody Map<String, Integer> val, @RequestBody Map<String, String> com){
         int value = val.get("value");
         String comment = com.get("comment");
         Score score = scoreService.addScore(value, comment, judgeId, subId);
         return ResponseEntity.ok(score);
-    }
+    }*/
 }
