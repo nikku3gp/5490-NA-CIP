@@ -1,4 +1,5 @@
 package com.photo.judging.controller;
+import com.photo.judging.entity.Score;
 import com.photo.judging.entity.Submission;
 import com.photo.judging.service.SubmissionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,11 @@ public class SubmissionController {
     @DeleteMapping("/{id}")
     public void deleteSubmission(@PathVariable Long id){
         submissionService.deleteSubmission(id);
+    }
+
+    @GetMapping("/{subId}/scores")
+    public List<Score> getSubmissionScore(@PathVariable Long subId){
+        return submissionService.getSubmissionScore(subId);
     }
 
 }

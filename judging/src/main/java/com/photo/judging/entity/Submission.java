@@ -13,11 +13,20 @@ public class Submission {
     private String PhotographerName;
     private String imgUrl;
 
+    @ManyToOne
+    private List<Score> scores = new ArrayList<>();
+
+    @ManyToOne
+    @JoinTable(
+            name = "subs",
+            joinColumns = @JoinColumn(name="subId"),
+            inverseJoinColumns = @JoinColumn(name = "judgeId")
+    )
+    private List<Judge> judges = new ArrayList<>();
     public Submission() {
     }
 
-    public Submission(Long id, String title, String category, String uploadedAt, String photographerName, String imgUrl) {
-        this.id = id;
+    public Submission (String title, String category, String uploadedAt, String photographerName, String imgUrl) {
         this.title = title;
         Category = category;
         UploadedAt = uploadedAt;
@@ -71,5 +80,21 @@ public class Submission {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public List<Judge> getJudges() {
+        return judges;
+    }
+
+    public void setJudges(List<Judge> judges) {
+        this.judges = judges;
+    }
+
+    public List<Score> getScores() {
+        return scores;
+    }
+
+    public void setScores(List<Score> scores) {
+        this.scores = scores;
     }
 }

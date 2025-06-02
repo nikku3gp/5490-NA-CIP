@@ -9,12 +9,14 @@ public class Judge {
     private String firstName;
     private String lastName;
     private String expertise;
-
+    @ManyToOne
+    private List<Score> scores = new ArrayList<>();
+    @OneToOne(mappedBy = "judge")
+    private List<Submission> submissions = new ArrayList<>();
     public Judge() {
     }
 
-    public Judge(Long id, String firstName, String lastName, String expertise) {
-        this.id = id;
+    public Judge(String firstName, String lastName, String expertise) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.expertise = expertise;
@@ -50,5 +52,21 @@ public class Judge {
 
     public void setExpertise(String expertise) {
         this.expertise = expertise;
+    }
+
+    public List<Submission> getSubmissions() {
+        return submissions;
+    }
+
+    public void setSubmissions(List<Submission> submissions) {
+        this.submissions = submissions;
+    }
+
+    public List<Score> getScores() {
+        return scores;
+    }
+
+    public void setScores(List<Score> scores) {
+        this.scores = scores;
     }
 }
